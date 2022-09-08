@@ -25,6 +25,19 @@ namespace SupermercadosLaPoderosa
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            //Agregamos los bundles para UZA
+            bundles.Add(new StyleBundle("~/Content/uza").Include(
+                "~/Content/uza/style.css"
+                ));
+            //Agregamos el bundle para script
+            bundles.Add(new ScriptBundle("~/bundles/uzajquery").Include(
+                     "~/Content/uza/js/jquery.min.js"
+                     , "~/Content/uza/js/popper.min.js"
+                     , "~/Content/uza/js/uza.bundle.js"
+                     , "~/Content/uza/js/bootstrap.min.js"
+                     , "~/Content/uza/js/default-assets/active.js"
+                     ));
         }
     }
 }
